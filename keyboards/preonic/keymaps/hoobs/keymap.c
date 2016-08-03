@@ -175,11 +175,11 @@ float tone_qwerty[][2]     = {
 };
 
 float tone_dvorak[][2]     = {
-  {NOTE_E5, 20}
+  {NOTE_G5, 20}
 };
 
 float tone_colemak[][2]    = {
-  {NOTE_G5,20}
+  {NOTE_E5,20}
 };
 
 float tone_goodbye[][2] = SONG(GOODBYE_SOUND);
