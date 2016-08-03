@@ -11,15 +11,13 @@
 // entirely and just use numbers.
 #define _QWERTY 0
 #define _COLEMAK 1
-#define _DVORAK 2
-#define _LOWER 3
-#define _RAISE 4
+#define _LOWER 2
+#define _RAISE 3
 #define _ADJUST 16
 
 enum preonic_keycodes {
   QWERTY = SAFE_RANGE,
   COLEMAK,
-  DVORAK,
   LOWER,
   RAISE,
   BACKLIT
