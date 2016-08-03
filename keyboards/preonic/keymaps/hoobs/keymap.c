@@ -52,27 +52,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
   },
 
-  /* Colemak
-  * ,-----------------------------------------------------------------------------------.
-  * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
-  * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Tab  |   Q  |   W  |   F  |   P  |   G  |   J  |   L  |   U  |   Y  |   ;  | Del  |
-  * |------+------+------+------+------+-------------+------+------+------+------+------|
-  * | Esc  |   A  |   R  |   S  |   T  |   D  |   H  |   N  |   E  |   I  |   O  |  "   |
-  * |------+------+------+------+------+------|------+------+------+------+------+------|
-  * | Shift|   Z  |   X  |   C  |   V  |   B  |   K  |   M  |   ,  |   .  |   /  |Enter |
-  * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Ctrl | GUI  | Alt  | Brite|Lower |    Space    |Raise | Left | Down |  Up  |Right |
-  * `-----------------------------------------------------------------------------------'
-  */
-  [_COLEMAK] = {
-    {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
-    {KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_DEL},
-    {KC_ESC,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT},
-    {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
-    {KC_LCTL, KC_LALT, KC_LGUI, BACKLIT, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
-  },
-
   /* Dvorak
   * ,-----------------------------------------------------------------------------------.
   * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
@@ -94,7 +73,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
   },
 
-  /* Lower
+  /* Colemak
+  * ,-----------------------------------------------------------------------------------.
+  * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+  * |------+------+------+------+------+------+------+------+------+------+------+------|
+  * | Tab  |   Q  |   W  |   F  |   P  |   G  |   J  |   L  |   U  |   Y  |   ;  |  '   |
+  * |------+------+------+------+------+-------------+------+------+------+------+------|
+  * | Bksp |   A  |   R  |   S  |   T  |   D  |   H  |   N  |   E  |   I  |   O  |  ENT |
+  * |------+------+------+------+------+------|------+------+------+------+------+------|
+  * | Shift|   Z  |   X  |   C  |   V  |   B  |   K  |   M  |   ,  |   .  |   /  | Shift|
+  * |------+------+------+------+------+------+------+------+------+------+------+------|
+  * | Ctrl | GUI  | Alt  | Brite|Lower |    Space    |Raise | Left | Down |  Up  |Right |
+  * `-----------------------------------------------------------------------------------'
+  */
+  [_COLEMAK] = {
+    {KC_GRV  , KC_1    , KC_2    , KC_3    , KC_4  , KC_5   , KC_6   , KC_7  , KC_8    , KC_9    , KC_0    , KC_BSPC  },
+    {KC_TAB  , KC_Q    , KC_W    , KC_F    , KC_P  , KC_G   , KC_J   , KC_L  , KC_U    , KC_Y    , KC_SCLN , KC_QUOT },
+    {KC_BSPC , KC_A    , KC_R    , KC_S    , KC_T  , KC_D   , KC_H   , KC_N  , KC_E    , KC_I    , KC_O    , KC_ENT },
+    {KC_LSFT , KC_Z    , KC_X    , KC_C    , KC_V  , KC_B   , KC_K   , KC_M  , KC_COMM , KC_DOT  , KC_SLSH , KC_RSFT },
+    {KC_LCTL , KC_LGUI , KC_LALT , BACKLIT , LOWER , KC_SPC , KC_SPC , RAISE , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT }
+  },
+
+  /* Raise
   * ,-----------------------------------------------------------------------------------.
   * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |      | NumLk|   /  |   *  |   -  |
   * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -107,15 +107,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |      |      |      |      |      |             |      |   0  |   0  |  DEL |  ENT |
   * `-----------------------------------------------------------------------------------'
   */
-  [_LOWER] = {
-    {KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, _______, KC_NLCK , KC_PSLS , KC_PAST , KC_PMNS },
-    {KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, _______, KC_KP_7 , KC_KP_8 , KC_KP_9 , KC_PPLS },
-    {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, KC_KP_4 , KC_KP_5 , KC_KP_6 , KC_PPLS },
-    {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_KP_1 , KC_KP_2 , KC_KP_3 , KC_PENT },
+  [_RAISE] = {
+    {_______, _______, _______, _______, _______, _______, _______, _______, KC_NLCK , KC_PSLS , KC_PAST , KC_PMNS },
+    {_______, _______, _______, _______, _______, _______, _______, _______, KC_KP_7 , KC_KP_8 , KC_KP_9 , KC_PPLS },
+    {_______, _______, _______, _______, _______, _______, _______, _______, KC_KP_4 , KC_KP_5 , KC_KP_6 , KC_PPLS },
+    {_______, _______, _______, _______, _______, _______, _______, _______, KC_KP_1 , KC_KP_2 , KC_KP_3 , KC_PENT },
     {_______, _______, _______, _______, _______, _______, _______, _______, KC_KP_0 , KC_KP_0 , KC_PDOT , KC_PENT }
   },
 
-  /* Raise
+  /* Lower
   * ,-----------------------------------------------------------------------------------.
   * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
   * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
   * `-----------------------------------------------------------------------------------'
   */
-  [_RAISE] = {
+  [_LOWER] = {
     {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
     {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL},
     {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS},
