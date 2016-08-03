@@ -162,10 +162,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #ifdef AUDIO_ENABLE
 float tone_startup[][2] = {
-  {NOTE_B5, 20},
-  {NOTE_B6, 8},
-  {NOTE_DS6, 20},
-  {NOTE_B6, 8}
+  {NOTE_G6, 25},
+  {NOTE_FS6, 25},
+  {NOTE_E6, 25},
+  {NOTE_REST, 1},
+  {NOTE_E6, 25},
+  {NOTE_FS6, 25}
 };
 
 float tone_qwerty[][2]     = SONG(QWERTY_SOUND);
