@@ -170,9 +170,17 @@ float tone_startup[][2] = {
   {NOTE_FS6, 25}
 };
 
-float tone_qwerty[][2]     = SONG(QWERTY_SOUND);
-float tone_dvorak[][2]     = SONG(DVORAK_SOUND);
-float tone_colemak[][2]    = SONG(COLEMAK_SOUND);
+float tone_qwerty[][2]     = {
+  {NOTE_C5, 20}
+};
+
+float tone_dvorak[][2]     = {
+  {NOTE_E5, 20}
+};
+
+float tone_colemak[][2]    = {
+  {NOTE_G5,20}
+};
 
 float tone_goodbye[][2] = SONG(GOODBYE_SOUND);
 
